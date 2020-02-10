@@ -16,13 +16,22 @@ namespace MyFirstApi.Controllers
         private readonly BZafEntities db = new BZafEntities();
         private readonly MyFirstDbEntities db1 = new MyFirstDbEntities();
 
-        //Aqui creamos metodo de tipo list para traer a todos los usuarios
-        public List<tbm_Usr> Get()
+        //Metodo para listar los usuarios de tbm_usu con el EF de ejemplo
+        public List<tbm_usu> Get()
         {
-            var usu = db.tbm_Usr.ToList();
+            var usu = db1.tbm_usu.ToList();
 
             return usu;
         }
+
+        //Aqui creamos metodo de tipo list para traer a todos los usuarios
+        //public List<tbm_Usr> Get()
+        //{
+        //    var loc = db.tbm_Usr.ToList();
+        //    //string res = JsonConvert.SerializeObject(usu);
+        //    //var rr = JsonConvert.DeserializeObject<UsuarioModel>(res);
+        //    return loc;
+        //}
 
         //En este metodo tremos el usuario segun el filtro y solo traemos el nombre con Linq
         //public string Get(int Id)
