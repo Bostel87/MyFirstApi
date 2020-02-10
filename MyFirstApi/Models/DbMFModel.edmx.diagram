@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="47978aa2beeb4ad4b656b2ffa4cd25fc" Name="Diagram1">
+        <EntityTypeShape EntityType="BZafModel.tbm_Emp" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BZafModel.tbm_Hor" Width="1.5" PointX="0.875" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BZafModel.tbm_Loc" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BZafModel.tbm_Res" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BZafModel.tbm_Ser" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BZafModel.tbm_Tra" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BZafModel.tbm_Usr" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
+        <AssociationConnector Association="BZafModel.C_3" ManuallyRouted="false" />
+        <AssociationConnector Association="BZafModel.C_9" ManuallyRouted="false" />
+        <AssociationConnector Association="BZafModel.C_1" ManuallyRouted="false" />
+        <AssociationConnector Association="BZafModel.C_4" ManuallyRouted="false" />
+        <AssociationConnector Association="BZafModel.C_5" ManuallyRouted="false" />
+        <AssociationConnector Association="BZafModel.C_6" ManuallyRouted="false" />
+        <AssociationConnector Association="BZafModel.C_7" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

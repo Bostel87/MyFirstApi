@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BZafModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbm_Emp">
+    <Key>
+      <PropertyRef Name="co_emp" />
+    </Key>
+    <Property Name="co_emp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tx_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fe_ing" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="st_reg" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="tbm_Res" Relationship="Self.C_3" FromRole="tbm_Emp" ToRole="tbm_Res" />
+  </EntityType>
+  <EntityType Name="tbm_Hor">
+    <Key>
+      <PropertyRef Name="co_hor" />
+    </Key>
+    <Property Name="co_hor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tx_des" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tbm_Loc" Relationship="Self.C_9" FromRole="tbm_Hor" ToRole="tbm_Loc" />
+  </EntityType>
+  <EntityType Name="tbm_Loc">
+    <Key>
+      <PropertyRef Name="co_loc" />
+    </Key>
+    <Property Name="co_loc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tx_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_des" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_dir" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="co_hor" Type="Int32" Nullable="false" />
+    <Property Name="fe_ing" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fe_ultmod" Type="DateTime" Precision="0" />
+    <Property Name="st_reg" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="tbm_Hor" Relationship="Self.C_9" FromRole="tbm_Loc" ToRole="tbm_Hor" />
+    <NavigationProperty Name="tbm_Tra" Relationship="Self.C_1" FromRole="tbm_Loc" ToRole="tbm_Tra" />
+    <NavigationProperty Name="tbm_Res" Relationship="Self.C_4" FromRole="tbm_Loc" ToRole="tbm_Res" />
+  </EntityType>
+  <EntityType Name="tbm_Res">
+    <Key>
+      <PropertyRef Name="co_emp" />
+      <PropertyRef Name="co_loc" />
+      <PropertyRef Name="co_res" />
+    </Key>
+    <Property Name="co_emp" Type="Int32" Nullable="false" />
+    <Property Name="co_loc" Type="Int32" Nullable="false" />
+    <Property Name="co_res" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="co_usr" Type="Int32" />
+    <Property Name="co_tra" Type="Int32" />
+    <Property Name="co_ser" Type="Int32" />
+    <Property Name="fe_res" Type="DateTime" Precision="0" />
+    <Property Name="st_reg" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="tbm_Emp" Relationship="Self.C_3" FromRole="tbm_Res" ToRole="tbm_Emp" />
+    <NavigationProperty Name="tbm_Loc" Relationship="Self.C_4" FromRole="tbm_Res" ToRole="tbm_Loc" />
+    <NavigationProperty Name="tbm_Usr" Relationship="Self.C_5" FromRole="tbm_Res" ToRole="tbm_Usr" />
+    <NavigationProperty Name="tbm_Tra" Relationship="Self.C_6" FromRole="tbm_Res" ToRole="tbm_Tra" />
+    <NavigationProperty Name="tbm_Ser" Relationship="Self.C_7" FromRole="tbm_Res" ToRole="tbm_Ser" />
+  </EntityType>
+  <EntityType Name="tbm_Ser">
+    <Key>
+      <PropertyRef Name="co_ser" />
+    </Key>
+    <Property Name="co_ser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tx_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_des" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_dura" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nd_tot" Type="Double" Nullable="false" />
+    <Property Name="fe_ing" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fe_ultmod" Type="DateTime" Precision="0" />
+    <Property Name="st_reg" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="tbm_Res" Relationship="Self.C_7" FromRole="tbm_Ser" ToRole="tbm_Res" />
+  </EntityType>
+  <EntityType Name="tbm_Tra">
+    <Key>
+      <PropertyRef Name="co_tra" />
+    </Key>
+    <Property Name="co_tra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="co_loc" Type="Int32" />
+    <Property Name="tx_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_ape" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_tel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_corr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_usu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_con" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fe_nac" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fe_ing" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fe_ultmod" Type="DateTime" Precision="0" />
+    <Property Name="st_reg" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="tbm_Loc" Relationship="Self.C_1" FromRole="tbm_Tra" ToRole="tbm_Loc" />
+    <NavigationProperty Name="tbm_Res" Relationship="Self.C_6" FromRole="tbm_Tra" ToRole="tbm_Res" />
+  </EntityType>
+  <EntityType Name="tbm_Usr">
+    <Key>
+      <PropertyRef Name="co_usr" />
+    </Key>
+    <Property Name="co_usr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tx_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_ape" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_tel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_corr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_usu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tx_con" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fe_nac" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fe_ing" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fe_ultmod" Type="DateTime" Precision="0" />
+    <Property Name="st_reg" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="tbm_Res" Relationship="Self.C_5" FromRole="tbm_Usr" ToRole="tbm_Res" />
+  </EntityType>
+  <Association Name="C_3">
+    <End Role="tbm_Emp" Type="Self.tbm_Emp" Multiplicity="1" />
+    <End Role="tbm_Res" Type="Self.tbm_Res" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbm_Emp">
+        <PropertyRef Name="co_emp" />
+      </Principal>
+      <Dependent Role="tbm_Res">
+        <PropertyRef Name="co_emp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C_9">
+    <End Role="tbm_Hor" Type="Self.tbm_Hor" Multiplicity="1" />
+    <End Role="tbm_Loc" Type="Self.tbm_Loc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbm_Hor">
+        <PropertyRef Name="co_hor" />
+      </Principal>
+      <Dependent Role="tbm_Loc">
+        <PropertyRef Name="co_hor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C_1">
+    <End Role="tbm_Loc" Type="Self.tbm_Loc" Multiplicity="0..1" />
+    <End Role="tbm_Tra" Type="Self.tbm_Tra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbm_Loc">
+        <PropertyRef Name="co_loc" />
+      </Principal>
+      <Dependent Role="tbm_Tra">
+        <PropertyRef Name="co_loc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C_4">
+    <End Role="tbm_Loc" Type="Self.tbm_Loc" Multiplicity="1" />
+    <End Role="tbm_Res" Type="Self.tbm_Res" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbm_Loc">
+        <PropertyRef Name="co_loc" />
+      </Principal>
+      <Dependent Role="tbm_Res">
+        <PropertyRef Name="co_loc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C_5">
+    <End Role="tbm_Usr" Type="Self.tbm_Usr" Multiplicity="0..1" />
+    <End Role="tbm_Res" Type="Self.tbm_Res" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbm_Usr">
+        <PropertyRef Name="co_usr" />
+      </Principal>
+      <Dependent Role="tbm_Res">
+        <PropertyRef Name="co_usr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C_6">
+    <End Role="tbm_Tra" Type="Self.tbm_Tra" Multiplicity="0..1" />
+    <End Role="tbm_Res" Type="Self.tbm_Res" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbm_Tra">
+        <PropertyRef Name="co_tra" />
+      </Principal>
+      <Dependent Role="tbm_Res">
+        <PropertyRef Name="co_tra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C_7">
+    <End Role="tbm_Ser" Type="Self.tbm_Ser" Multiplicity="0..1" />
+    <End Role="tbm_Res" Type="Self.tbm_Res" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbm_Ser">
+        <PropertyRef Name="co_ser" />
+      </Principal>
+      <Dependent Role="tbm_Res">
+        <PropertyRef Name="co_ser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BZafEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbm_Emp" EntityType="Self.tbm_Emp" />
+    <EntitySet Name="tbm_Hor" EntityType="Self.tbm_Hor" />
+    <EntitySet Name="tbm_Loc" EntityType="Self.tbm_Loc" />
+    <EntitySet Name="tbm_Res" EntityType="Self.tbm_Res" />
+    <EntitySet Name="tbm_Ser" EntityType="Self.tbm_Ser" />
+    <EntitySet Name="tbm_Tra" EntityType="Self.tbm_Tra" />
+    <EntitySet Name="tbm_Usr" EntityType="Self.tbm_Usr" />
+    <AssociationSet Name="C_3" Association="Self.C_3">
+      <End Role="tbm_Emp" EntitySet="tbm_Emp" />
+      <End Role="tbm_Res" EntitySet="tbm_Res" />
+    </AssociationSet>
+    <AssociationSet Name="C_9" Association="Self.C_9">
+      <End Role="tbm_Hor" EntitySet="tbm_Hor" />
+      <End Role="tbm_Loc" EntitySet="tbm_Loc" />
+    </AssociationSet>
+    <AssociationSet Name="C_1" Association="Self.C_1">
+      <End Role="tbm_Loc" EntitySet="tbm_Loc" />
+      <End Role="tbm_Tra" EntitySet="tbm_Tra" />
+    </AssociationSet>
+    <AssociationSet Name="C_4" Association="Self.C_4">
+      <End Role="tbm_Loc" EntitySet="tbm_Loc" />
+      <End Role="tbm_Res" EntitySet="tbm_Res" />
+    </AssociationSet>
+    <AssociationSet Name="C_5" Association="Self.C_5">
+      <End Role="tbm_Usr" EntitySet="tbm_Usr" />
+      <End Role="tbm_Res" EntitySet="tbm_Res" />
+    </AssociationSet>
+    <AssociationSet Name="C_6" Association="Self.C_6">
+      <End Role="tbm_Tra" EntitySet="tbm_Tra" />
+      <End Role="tbm_Res" EntitySet="tbm_Res" />
+    </AssociationSet>
+    <AssociationSet Name="C_7" Association="Self.C_7">
+      <End Role="tbm_Ser" EntitySet="tbm_Ser" />
+      <End Role="tbm_Res" EntitySet="tbm_Res" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BZafModelStoreContainer" CdmEntityContainer="BZafEntities">
+    <EntitySetMapping Name="tbm_Emp">
+      <EntityTypeMapping TypeName="BZafModel.tbm_Emp">
+        <MappingFragment StoreEntitySet="tbm_Emp">
+          <ScalarProperty Name="co_emp" ColumnName="co_emp" />
+          <ScalarProperty Name="tx_nom" ColumnName="tx_nom" />
+          <ScalarProperty Name="fe_ing" ColumnName="fe_ing" />
+          <ScalarProperty Name="st_reg" ColumnName="st_reg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbm_Hor">
+      <EntityTypeMapping TypeName="BZafModel.tbm_Hor">
+        <MappingFragment StoreEntitySet="tbm_Hor">
+          <ScalarProperty Name="co_hor" ColumnName="co_hor" />
+          <ScalarProperty Name="tx_des" ColumnName="tx_des" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbm_Loc">
+      <EntityTypeMapping TypeName="BZafModel.tbm_Loc">
+        <MappingFragment StoreEntitySet="tbm_Loc">
+          <ScalarProperty Name="co_loc" ColumnName="co_loc" />
+          <ScalarProperty Name="tx_nom" ColumnName="tx_nom" />
+          <ScalarProperty Name="tx_des" ColumnName="tx_des" />
+          <ScalarProperty Name="tx_dir" ColumnName="tx_dir" />
+          <ScalarProperty Name="co_hor" ColumnName="co_hor" />
+          <ScalarProperty Name="fe_ing" ColumnName="fe_ing" />
+          <ScalarProperty Name="fe_ultmod" ColumnName="fe_ultmod" />
+          <ScalarProperty Name="st_reg" ColumnName="st_reg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbm_Res">
+      <EntityTypeMapping TypeName="BZafModel.tbm_Res">
+        <MappingFragment StoreEntitySet="tbm_Res">
+          <ScalarProperty Name="co_emp" ColumnName="co_emp" />
+          <ScalarProperty Name="co_loc" ColumnName="co_loc" />
+          <ScalarProperty Name="co_res" ColumnName="co_res" />
+          <ScalarProperty Name="co_usr" ColumnName="co_usr" />
+          <ScalarProperty Name="co_tra" ColumnName="co_tra" />
+          <ScalarProperty Name="co_ser" ColumnName="co_ser" />
+          <ScalarProperty Name="fe_res" ColumnName="fe_res" />
+          <ScalarProperty Name="st_reg" ColumnName="st_reg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbm_Ser">
+      <EntityTypeMapping TypeName="BZafModel.tbm_Ser">
+        <MappingFragment StoreEntitySet="tbm_Ser">
+          <ScalarProperty Name="co_ser" ColumnName="co_ser" />
+          <ScalarProperty Name="tx_nom" ColumnName="tx_nom" />
+          <ScalarProperty Name="tx_des" ColumnName="tx_des" />
+          <ScalarProperty Name="tx_dura" ColumnName="tx_dura" />
+          <ScalarProperty Name="nd_tot" ColumnName="nd_tot" />
+          <ScalarProperty Name="fe_ing" ColumnName="fe_ing" />
+          <ScalarProperty Name="fe_ultmod" ColumnName="fe_ultmod" />
+          <ScalarProperty Name="st_reg" ColumnName="st_reg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbm_Tra">
+      <EntityTypeMapping TypeName="BZafModel.tbm_Tra">
+        <MappingFragment StoreEntitySet="tbm_Tra">
+          <ScalarProperty Name="co_tra" ColumnName="co_tra" />
+          <ScalarProperty Name="co_loc" ColumnName="co_loc" />
+          <ScalarProperty Name="tx_nom" ColumnName="tx_nom" />
+          <ScalarProperty Name="tx_ape" ColumnName="tx_ape" />
+          <ScalarProperty Name="tx_tel" ColumnName="tx_tel" />
+          <ScalarProperty Name="tx_corr" ColumnName="tx_corr" />
+          <ScalarProperty Name="tx_usu" ColumnName="tx_usu" />
+          <ScalarProperty Name="tx_con" ColumnName="tx_con" />
+          <ScalarProperty Name="fe_nac" ColumnName="fe_nac" />
+          <ScalarProperty Name="fe_ing" ColumnName="fe_ing" />
+          <ScalarProperty Name="fe_ultmod" ColumnName="fe_ultmod" />
+          <ScalarProperty Name="st_reg" ColumnName="st_reg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbm_Usr">
+      <EntityTypeMapping TypeName="BZafModel.tbm_Usr">
+        <MappingFragment StoreEntitySet="tbm_Usr">
+          <ScalarProperty Name="co_usr" ColumnName="co_usr" />
+          <ScalarProperty Name="tx_nom" ColumnName="tx_nom" />
+          <ScalarProperty Name="tx_ape" ColumnName="tx_ape" />
+          <ScalarProperty Name="tx_tel" ColumnName="tx_tel" />
+          <ScalarProperty Name="tx_corr" ColumnName="tx_corr" />
+          <ScalarProperty Name="tx_usu" ColumnName="tx_usu" />
+          <ScalarProperty Name="tx_con" ColumnName="tx_con" />
+          <ScalarProperty Name="fe_nac" ColumnName="fe_nac" />
+          <ScalarProperty Name="fe_ing" ColumnName="fe_ing" />
+          <ScalarProperty Name="fe_ultmod" ColumnName="fe_ultmod" />
+          <ScalarProperty Name="st_reg" ColumnName="st_reg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

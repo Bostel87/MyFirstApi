@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyFirstDbModelStoreContainer" CdmEntityContainer="MyFirstDbEntities">
+    <EntitySetMapping Name="tbm_usu">
+      <EntityTypeMapping TypeName="MyFirstDbModel.tbm_usu">
+        <MappingFragment StoreEntitySet="tbm_usu">
+          <ScalarProperty Name="co_usr" ColumnName="co_usr" />
+          <ScalarProperty Name="tx_nom" ColumnName="tx_nom" />
+          <ScalarProperty Name="tx_ape" ColumnName="tx_ape" />
+          <ScalarProperty Name="tx_tel" ColumnName="tx_tel" />
+          <ScalarProperty Name="tx_dir" ColumnName="tx_dir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
